@@ -1,55 +1,63 @@
 *{
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
 body{
+    background-color: #fafafa;
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    margin: auto;
-    font-family: Verdana;
+    transition: background 0.3s linear;
 }
 
-.tema_claro{
-    background-color: #e1ceff;
-    transition: 2s;
+body.dark{
+    background-color: #232c35;
 }
 
-.tema_escuro{
-    background-color: #505050;
-    transition: 2s;
+.checkbox{
+    opacity: 0;
+    position: absolute;
 }
 
-.botao_escuro{
-    padding: 15px;
+.label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
     display: flex;
-    margin: auto;
-    background-color: #505050;
-    justify-content: flex-start;
     align-items: center;
-    height: 40px;
-    width: 175px;
-    border: 2px solid black;
-    border-radius: 15px;
-}
-.botao_claro{
-    padding: 15px;
-    display: flex;
-    margin: auto;
-    background-color: #e1ceff;
-    justify-content: flex-start;
-    align-items: center;
-    height: 40px;
-    width: 175px;
-    border: 2px solid black;
-    border-radius: 15px;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(2);
 }
 
-#palavra{
-    font-weight: bolder;
-    font-size: 19px;
-    color: #f7f7f7;
-    transition: 1s;
+.label .ball{
+    background-color: #1f1c38;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.3s linear;
 }
 
+.checkbox:checked +.label .ball{
+    transform: translateX(24px);
+}
+
+.fa-sun{
+    color: #f39c12;
+}
+.fa-moon{
+    color: #f1c40f;
+}
