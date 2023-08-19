@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    font-family: Verdana;
+}
+
+.tema_claro{
+    background-color: #e1ceff;
+    transition: 2s;
+}
+
+.tema_escuro{
+    background-color: #505050;
+    transition: 2s;
+}
+
+.botao_escuro{
+    padding: 15px;
+    display: flex;
+    margin: auto;
+    background-color: #505050;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 175px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.botao_claro{
+    padding: 15px;
+    display: flex;
+    margin: auto;
+    background-color: #e1ceff;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 175px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#palavra{
+    font-weight: bolder;
+    font-size: 19px;
+    color: #f7f7f7;
+    transition: 1s;
+}
+
